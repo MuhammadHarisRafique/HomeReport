@@ -106,6 +106,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func checkDataStore(){
+    
+    
+        let request = NSFetchRequest(entityName: "Home")
+        let numberOfRecords = managedObjectContext.countForFetchRequest(request, error: NSErrorPointer.init())
+        print("\(numberOfRecords) Records")
+        
+        if numberOfRecords == 0{
+        
+            self.uploadData()
+            
+        }
+    
+    
+    
+    
+    }
+    
+    func uploadData(){
+    
+    let entity = NSEntityDescription.insertNewObjectForEntityForName("Home", inManagedObjectContext: self.managedObjectContext) as! Home
+        
+        
+    
+        
+    
+    
+    }
+    
 
 }
 

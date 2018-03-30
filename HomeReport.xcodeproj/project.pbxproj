@@ -23,6 +23,8 @@
 		A543E5D3206E7B0E00472983 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543E5CB206E7B0E00472983 /* Home.swift */; };
 		A543E5D4206E7B0E00472983 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543E5CC206E7B0E00472983 /* Location+CoreDataProperties.swift */; };
 		A543E5D5206E7B0E00472983 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543E5CD206E7B0E00472983 /* Location.swift */; };
+		A543E5D7206E982400472983 /* Lahore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A543E5D6206E982400472983 /* Lahore.jpg */; };
+		A543E5D9206E991700472983 /* Karachi.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A543E5D8206E991700472983 /* Karachi.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		A543E5CB206E7B0E00472983 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		A543E5CC206E7B0E00472983 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A543E5CD206E7B0E00472983 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A543E5D6206E982400472983 /* Lahore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lahore.jpg; sourceTree = "<group>"; };
+		A543E5D8206E991700472983 /* Karachi.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Karachi.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				A543E5C6206E7B0E00472983 /* Category+CoreDataProperties.swift */,
 				A543E5C7206E7B0E00472983 /* Category.swift */,
 				A543E5C8206E7B0E00472983 /* Status+CoreDataProperties.swift */,
+				A543E5D6206E982400472983 /* Lahore.jpg */,
+				A543E5D8206E991700472983 /* Karachi.jpeg */,
 				A543E5C9206E7B0E00472983 /* Status.swift */,
 				A543E5CA206E7B0E00472983 /* Home+CoreDataProperties.swift */,
 				A543E5CB206E7B0E00472983 /* Home.swift */,
@@ -256,6 +262,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A543E5D7206E982400472983 /* Lahore.jpg in Resources */,
+				A543E5D9206E991700472983 /* Karachi.jpeg in Resources */,
 				A543E5A3206E72FB00472983 /* LaunchScreen.storyboard in Resources */,
 				A543E5A0206E72FB00472983 /* Assets.xcassets in Resources */,
 				A543E59B206E72FB00472983 /* Main.storyboard in Resources */,

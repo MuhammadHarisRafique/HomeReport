@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+       self.checkDataStore()
+               
         return true
     }
     
@@ -111,7 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let request = NSFetchRequest(entityName: "Home")
-        let numberOfRecords = managedObjectContext.countForFetchRequest(request, error: NSErrorPointer.init())
+        let numberOfRecords = managedObjectContext.countForFetchRequest(request, error: nil)
         print("\(numberOfRecords) Records")
         
         if numberOfRecords == 0{
@@ -149,7 +150,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         category_entity.homeType = "Single Family"
         home_entity.category = category_entity
         
-        let karachi_image = UIImage(named: "Karachi.jpg")
+        let karachi_image = UIImage(named: "Karachi.jpeg")
         let binary_Data = UIImageJPEGRepresentation(karachi_image!, 1.0)
         home_entity.image = binary_Data
         
@@ -180,9 +181,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let lahore_image = UIImage(named: "Lahore.jpg")
         let binaryData = UIImageJPEGRepresentation(lahore_image!, 1.0)
         home_entityTwo.image = binaryData
+        self.saveContext()
         
         
     }
+    
+    
+    
+    
     
     
 }

@@ -65,9 +65,59 @@ class ViewController: UIViewController {
         self.txtViewHomeDetails.text = homeDetails
         
     }
+    
+    
+    
 
     @IBAction func homeAction(sender: UIButton) {
         
+    let recordNumberOne  = self.homeDetailsByCategory()
+        
+        //print(recordNumberOne.location)
+        
+        let image = UIImage(data: recordNumberOne.image!)
+        
+        self.homeImageView.image = image
+        var homeDetails = ""
+        let bed = recordNumberOne.bed!
+        homeDetails += "No. Of Beds \(bed)"
+        let bath = recordNumberOne.bath!
+        
+        homeDetails += "\nNo. Of bath \(bath)"
+        
+        let country = recordNumberOne.country!
+        
+        
+        homeDetails += "\nCountry \(country)"
+        
+        let price = recordNumberOne.price!
+        homeDetails += "\nPrice \(price)"
+        
+        let sqft = recordNumberOne.sqft!
+        homeDetails += "\nsqft \(sqft)"
+        
+        let category = recordNumberOne.category
+        
+        homeDetails += "\nHomeType \(category!.homeType!)"
+        
+        let city = recordNumberOne.location
+        
+        homeDetails += "\nCity \(city!.city!)"
+        
+        let status = recordNumberOne.status
+        let value = status!.isForSale! as Bool
+        
+        if value == true{
+            
+            homeDetails += "\nReady to sale"
+            
+        }
+        else{
+            homeDetails += "\nNot Available"
+        }
+        
+        
+        self.txtViewHomeDetails.text = homeDetails
         
         
     }
@@ -107,6 +157,52 @@ class ViewController: UIViewController {
         
         return homeArray
     }
+    
+    func homeDetailsByCategory() -> Home  {
+        
+        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        var homeArray:Home?
+        
+        let fetchedRequest = NSFetchRequest(entityName: "Category")
+        
+        do{
+            
+            let records = try context.executeFetchRequest(fetchedRequest) as! [Category]
+            print(records.count)
+            homeArray = records[1].home
+            
+        }catch let err{
+            
+            print(err)
+            
+        }
+        
+        
+        return homeArray!
+    }
+    func homeDetailsByLocation() -> Home  {
+        
+        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        var homeArray:Home?
+        
+        let fetchedRequest = NSFetchRequest(entityName: "Location")
+        
+        do{
+            
+            let records = try context.executeFetchRequest(fetchedRequest) as! [Location]
+            print(records.count)
+            homeArray = records[1].home
+            
+        }catch let err{
+            
+            print(err)
+            
+        }
+        
+        
+        return homeArray!
+    }
+
     
 
 }

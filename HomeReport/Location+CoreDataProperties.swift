@@ -15,6 +15,6 @@ import CoreData
 extension Location {
 
     @NSManaged var city: String?
-    @NSManaged var home: NSSet?
+    @NSManaged var home: Home?
 
 }
